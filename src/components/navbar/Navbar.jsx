@@ -15,7 +15,7 @@ const Navbar = () => {
 
 
   return (
-    <div className='static w-full h-[80px] flex justify-between items-center px-5 bg-[#084C72] border-b-1 z-10'>
+    <div className='sticky top-0 w-full h-[80px] flex justify-between items-center px-5 bg-[#084C72] border-b-1 z-10'>
         <div className='z-10'>
             <img src={Logo} alt="my-logo" style={{width:'50px'}} />
         </div>
@@ -37,7 +37,7 @@ const Navbar = () => {
             <li>Contact Us</li>
         </ul>
 
-        <div className='hidden lg:flex flex-col absolute left-0 top-[35%]'>
+        <div className='hidden fixed lg:flex flex-col left-0 top-[35%]'>
             <ul>
                 {/* <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#43A21C] '><Link className='flex justify-between w-full items-center'  to="https://wa.me/081323848971">Whatsapp <BSIcons.BsWhatsapp size={30} /></Link></li> */}
                 {medsos.map((items, id) =>{
