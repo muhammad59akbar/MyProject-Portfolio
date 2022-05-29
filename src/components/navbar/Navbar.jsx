@@ -23,7 +23,7 @@ const Navbar = () => {
             <ul className='hidden md:flex'>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/About">About Me</Link></li>
-                <li>Contact Us</li>
+                <li><Link to="/Contact">Contact Us</Link></li>
             </ul>
         </div>
 
@@ -32,9 +32,9 @@ const Navbar = () => {
         </div>
         
         <ul className={NavClick ? 'lg:hidden md:hidden w-full h-screen flex flex-col items-center justify-center absolute left-0 right-0 top-0 bg-[#084C72] transition duration-400 ease-in' : 'absolute right-full transition-duration-500 ease-out'}>
-            <li>Home</li>
-            <li>About Me</li>
-            <li>Contact Us</li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/About">About Me</Link></li>
+            <li><Link to="/Contact">Contact Us</Link></li>
         </ul>
 
         <div className='hidden fixed lg:flex flex-col left-0 top-[35%]'>
@@ -49,8 +49,6 @@ const Navbar = () => {
 
         </div>
         
-
-       
 
 
     </div>
