@@ -24,10 +24,10 @@ export const medsos = [
     },
     {
         id: 4,
-        class: 'w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#19529B]',
-        name: 'Linkedin',
-        icon: <BSIcons.BsLinkedin size={30} />,
-        link: 'https://www.linkedin.com/in/muhammad-rizki-akbar-a31253216/'
+        class: 'w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-gradient-to-r from-purple-500 to-pink-500',
+        name: 'Instagram',
+        icon: <BSIcons.BsInstagram size={30} />,
+        link: 'https://www.instagram.com/mrbyee_/'
     }
 
 ]

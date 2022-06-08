@@ -34,11 +34,11 @@ const Slider = () => {
         return () => clearInterval(slideindex);
     });
   return (
-    <div className='w-full h-[550px] flex flex-row overflow-hidden relative'>
+    <div className='w-full h-full flex flex-row overflow-hidden relative'>
       {imageslider.map((content, index) => {
         return (
           <div className={currentSlide === index + 1 ? 'w-full h-full opacity-100' : 'w-0 opacity-0'} key={index}>
-            <img src={content.image} alt="" className='w-full h-full object-cover' />
+            <img src={content.image} alt="" className='w-full h-auto object-cover max-w-full' />
           </div>
         )
       })}

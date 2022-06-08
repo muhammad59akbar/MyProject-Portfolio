@@ -12,7 +12,11 @@ const Navbar = () => {
     const [NavClick, SetNav] = useState(false);
     const handleClick = () => SetNav(!NavClick);
 
-
+    function refreshPage() {
+        setTimeout(()=>{
+            window.location.reload(false);
+        }, 100);
+    }
 
   return (
     <div className='sticky top-0 w-full h-[80px] flex justify-between items-center px-5 bg-[#084C72] border-b-1 z-10'>
@@ -21,7 +25,7 @@ const Navbar = () => {
         </div>
         <div>
             <ul className='hidden md:flex'>
-                <li><Link to="/">Home</Link></li>
+                <li><Link to="/" >Home</Link></li>
                 <li><Link to="/About">About Me</Link></li>
                 <li><Link to="/Contact">Contact Us</Link></li>
             </ul>
@@ -31,10 +35,10 @@ const Navbar = () => {
             {NavClick ? <AiIcons.AiOutlineClose /> : <FaIcons.FaBars /> }
         </div>
         
-        <ul className={NavClick ? 'lg:hidden md:hidden w-full h-screen flex flex-col items-center justify-center absolute left-0 right-0 top-0 bg-[#084C72] transition duration-400 ease-in' : 'absolute right-full transition-duration-500 ease-out'}>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/About">About Me</Link></li>
-            <li><Link to="/Contact">Contact Us</Link></li>
+        <ul className={NavClick ? 'lg:hidden md:hidden w-full h-screen flex flex-col items-center justify-center absolute left-0 right-0 top-0 bg-[#084C72] transition duration-400 ease-in' : 'absolute top-[80px] right-full transition-duration-500 ease-out'}>
+            <li><Link to="/" onClick={refreshPage} >Home</Link></li>
+            <li><Link to="/About" onClick={refreshPage} >About Me</Link></li>
+            <li><Link to="/Contact" onClick={refreshPage}  >Contact Us</Link></li>
         </ul>
 
         <div className='hidden fixed lg:flex flex-col left-0 top-[35%]'>
@@ -42,7 +46,7 @@ const Navbar = () => {
                 {/* <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#43A21C] '><Link className='flex justify-between w-full items-center'  to="https://wa.me/081323848971">Whatsapp <BSIcons.BsWhatsapp size={30} /></Link></li> */}
                 {medsos.map((items, id) =>{
                     return (
-                        <li className={items.class} key={id}><Link to={items.link} className='flex justify-between w-full items-center' >{items.name} {items.icon}</Link></li>
+                        <li className={items.class} key={id}><a href={items.link} className='flex justify-between w-full items-center' >{items.name} {items.icon}</a></li>
                     )
                 })}
             </ul>
