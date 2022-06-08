@@ -1,0 +1,26 @@
+.animasi path {
+    stroke: #8A8C8C;
+    stroke-width: 70;
+    fill: transparent;
+}
+
+.icondrive path{
+    stroke-dasharray: 15000;
+    stroke-dashoffset: 0;
+    animation: animate-drive 8s linear forwards infinite;
+}
+
+@keyframes animate-drive {
+    0%{
+        stroke-dashoffset: 0;
+    }
+    40%{
+        stroke-dashoffset: 10000;
+    }
+    80%{
+        stroke-dashoffset: 15000;
+        fill: white;
+    }
+    
+}
+
